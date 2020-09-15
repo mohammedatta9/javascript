@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>JAVA SCRIPT </title>
+</head>
+<body>
+  <h2>What Can JavaScript Do?</h2>
+
+<p id="demo">JavaScript can change HTML content.</p>
+
+<button type="button" onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript!'">Click Me!</button>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p>JavaScript can change HTML attribute values.</p>
+
+<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+
+<img id="myImage" src="pic_bulboff.gif" style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+<!--
+  document.getElementById("demo").style.display = "none";
+  document.getElementById("demo").style.display = "block";
+  document.getElementById("demo").style.fontSize = "35px";
+ 
+-->
+<hr>
+
+
+<!--The <script> Tag-->
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "My First JavaScript";
+function myFunction() {
+  document.getElementById("FUN").innerHTML = "Paragraph changed.";
+}
+</script>
+
+<h1>FUNCTION</h3>
+
+<p id="FUN">A Paragraph.</p>
+
+<button type="button" onclick="myFunction()">Try it</button>
+<hr>
+<!--
+  JavaScript can "display" data in different ways:
+
+Writing into an HTML element, using innerHTML.
+Writing into the HTML output using document.write().
+Writing into an alert box, using window.alert().
+Writing into the browser console, using console.log().
+-->
+<script>
+  
+  function S() {
+    document.getElementById("innerHTML").innerHTML = 5 + 6;
+}
+</script>
+<button type="button" onclick="S()">click</button>
+<p id="innerHTML"></p>
+<p>Never call document.write after the document has finished loading.
+  It will overwrite the whole document.</p>
+  
+  <script>
+  document.write(5 + 6);
+  </script>
+  <p>The document.write() method should only be used for testing.  </p>
+  <button type="button" onclick="document.write(5 + 6)">Try it</button>
+<!--The document.write() method should only be used for testing.-->
+<!--
+  <script>
+window.alert(5 + 6);
+متساويات تقريبا تحدير اول ما تفوت الصفحه
+alert(5 + 6);
+</script>
+-->
+<p>F12 on your keybord will activate debugging.</p>
+<p>Then select "Console" in the debugger menu.</p>
+<p>Then click Run again.</p>
+<script>
+console.log(5 + 6);
+</script>
+<h2>The window.print() Method</h2>
+
+<p>Click the button to print the current page.</p>
+
+<button onclick="window.print()">Print this page</button>
+<h2>JavaScript typeof</h2>
+<p>The typeof operator returns the type of a variable or an expression.</p>
+
+<p id="tof"></p>
+
+<script>
+document.getElementById("tof").innerHTML = 
+typeof 0 + "<br>" + 
+typeof "" + "<br>" + 
+typeof 314 + "<br>" +
+typeof 3.14 + "<br>" +
+typeof (3) + "<br>" +
+typeof (3 + 4);
+</script>
+<hr>
+<p>event html </p>
+<button onclick="document.getElementById('ev').innerHTML=Date()">The time is?</button>
+
+<p id="ev"></p>
+
+
+</body>
+</html>
